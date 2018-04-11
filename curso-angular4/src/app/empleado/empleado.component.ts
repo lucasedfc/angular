@@ -6,5 +6,5 @@ import {Component} from '@angular/core';
 })
 
 export class EmpleadoComponent {
-    public title_empleado = 'Componente de Sarasa'
+    public title_empleado = 'Componente de Emleados'
 }
