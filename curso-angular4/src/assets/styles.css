@@ -1,0 +1,16 @@
+
+.bordeAzul {
+    border: 3px solid lightblue !important;
+}
+
+.fondoAzul {
+    background-color: lightblue !important;
+}
+
+.fondoVerde {
+    background-color: lightgreen !important;
+}
+
+.letraGrande {
+    font-size: 40px;
+}
