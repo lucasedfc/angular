@@ -63,3 +63,14 @@
         </li>
     </ul>
 </div>
+
+<div class="listado">
+    <h3>Listado de articulos (Ajax)</h3>
+    <ul>
+        <li *ngFor="let articulo of articulos">
+            {{articulo.id}} - {{articulo.title}} - {{articulo.body}}
+        </li>
+    </ul>
+
+    <span *ngIf="!articulos">Cargando listado...</span>
+</div>
