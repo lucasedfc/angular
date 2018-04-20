@@ -3,7 +3,7 @@ require_once "vendor/autoload.php";
 
 $app = new \Slim\Slim();
 
-$db = new mysqli('localhost', 'root', 'Qa12pl09', 'curso_angular4');
+$db = new mysqli('localhost', 'root', '', 'curso_angular4');
 
 // Configuración de cabeceras
 header('Access-Control-Allow-Origin: *');
@@ -111,9 +111,10 @@ if(isset($data['imagen'])) {
 
 $sql .= "precio = '{$data["precio"]}' WHERE id = {$id}";
 
+var_dump($sql);
 $query = $db->query($sql);
 
-//var_dump($sql);
+
 
 
 if($query){
@@ -147,7 +148,7 @@ $app->post('/upload-file', function() use($db, $app){
     );
 
     if(isset($_FILES['uploads'])) {
-        //echo "Llegan los datos";
+        echo "Llegan los datos";
         $piramideUploader = new PiramideUploader();
 
                                             // prefijo  namefile    carpeta     formato
@@ -156,7 +157,7 @@ $app->post('/upload-file', function() use($db, $app){
         $file = $piramideUploader->getInfoFile();
         $file_name = $file['complete_name'];
 
-        //var_dump($file);
+        var_dump($file);
 
         if(isset($upload) && $upload['uploaded'] == false) {
             $result = array(
