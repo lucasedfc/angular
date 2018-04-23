@@ -17,7 +17,7 @@ export class ProductoService {
     }
 
     getProductos() {
-        return this._http.get(this.url+'productos').map(res => res.json())
+        return this._http.get(this.url+'productos').map(res => res.json());
     }
 	
 	getProducto(id) {
@@ -34,6 +34,10 @@ export class ProductoService {
 
 	}
 
+	deleteProducto(id) {
+		return this._http.get(this.url+'delete-producto/'+id)
+						.map(res => res.json());
+	}
     addProducto(producto: Producto) {
         let json = JSON.stringify(producto);
         let params = 'json='+json;

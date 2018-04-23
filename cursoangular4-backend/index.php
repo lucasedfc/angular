@@ -3,7 +3,7 @@ require_once "vendor/autoload.php";
 
 $app = new \Slim\Slim();
 
-$db = new mysqli('localhost', 'root', 'Qa12pl09', 'curso_angular4');
+$db = new mysqli('localhost', 'root', '', 'curso_angular4');
 
 // Configuración de cabeceras
 header('Access-Control-Allow-Origin: *');
