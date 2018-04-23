@@ -3,7 +3,7 @@ require_once "vendor/autoload.php";
 
 $app = new \Slim\Slim();
 
-$db = new mysqli('localhost', 'root', 'Qa12pl09', 'curso_angular4');
+$db = new mysqli('localhost', 'root', '', 'curso_angular4');
 
 // Configuración de cabeceras
 header('Access-Control-Allow-Origin: *');
@@ -148,22 +148,21 @@ $app->post('/upload-file', function() use($db, $app){
     );
 
     if(isset($_FILES['uploads'])) {
-        echo "Llegan los datos";
         $piramideUploader = new PiramideUploader();
 
                                             // prefijo  namefile    carpeta     formato
-        $upload = $piramideUploader->upload('image', "uploads", "uploads", array('image/jpeg', 'imagen/png', 'image/gif'));
+        $upload = $piramideUploader->upload('image', "uploads", "uploads", array('image/jpeg', 'image/png', 'image/gif'));
 
         $file = $piramideUploader->getInfoFile();
         $file_name = $file['complete_name'];
 
-        var_dump($file);
+        //var_dump($file);
 
-        if(isset($upload) && $upload['uploaded'] == false) {
+        if(isset($upload) && $upload["uploaded"] == false) {
             $result = array(
                 'status' => 'error',
                 'code' => 404,
-                'message' => 'Archivo no se ha subido correctamente'
+                'message' => 'No se pudo subir el archivo'
             );
         }
 
@@ -179,7 +178,7 @@ $app->post('/upload-file', function() use($db, $app){
 
     }
    
-    echo json_encode($result);
+    print json_encode($result);
 });
 
 
