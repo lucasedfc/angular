@@ -43,7 +43,7 @@
         <p>
             <label>Color</label>
             <input type="text" name="color" #color="ngModel" [(ngModel)]="coche.color" required 
-            pattern="[a-aA-Z#]">
+            pattern="[a-zA-Z#]+">
             <span *ngIf="color.touched && !color.valid">
                 El color del coche es incorrecto
             </span>
