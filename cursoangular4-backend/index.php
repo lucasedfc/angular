@@ -3,7 +3,7 @@ require_once "vendor/autoload.php";
 
 $app = new \Slim\Slim();
 
-$db = new mysqli('localhost', 'root', '', 'curso_angular4');
+$db = new mysqli('localhost', 'root', 'Qa12pl09', 'curso_angular4');
 
 // Configuración de cabeceras
 header('Access-Control-Allow-Origin: *');
@@ -48,7 +48,7 @@ $app->get('/productos', function() use($db, $app){
 
 
 //Devolver un producto
-$app->get('/productos/:id', function($id) use($db, $app){
+$app->get('/producto/:id', function($id) use($db, $app){
     $sql = 'SELECT * FROM productos WHERE id = '.$id;
     $query = $db->query($sql);
 
