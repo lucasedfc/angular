@@ -15,6 +15,7 @@ export class ProductoAddComponent {
     public producto:Producto;
     public filesToUpload;
     public resultUpload;
+    public is_edit;
 
     constructor(
         private _productoService: ProductoService,
