@@ -4,9 +4,19 @@
 <componente-hijo
 [texto1]="dato_externo"
 [texto2]="identity"
+(desde_el_hijo)="recibirDatos($event)"
 >
 
 </componente-hijo>
+
+
+<div *ngIf="datos_del_hijo">
+        <p>Datos provenientes del componenete hijo al componenete padre</p>
+        <h1>{{datos_del_hijo.nombre}}</h1>
+        <h1>{{datos_del_hijo.edad}}</h1>
+        <h1>{{datos_del_hijo.sexo}}</h1>
+
+</div>
 
 <hr>
 
