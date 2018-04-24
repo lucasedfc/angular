@@ -12,6 +12,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { ConversorPipe } from './pipes/conversor.pipe';
 import { CochesComponent } from './coches/coches.component';
 import { PlantillasComponent } from './plantillas/plantillas.component';
+import { HijoComponent } from './hijo/hijo.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { PlantillasComponent } from './plantillas/plantillas.component';
     ContactoComponent,
     CochesComponent,
     PlantillasComponent,
+    HijoComponent,
     ConversorPipe
   ],
   imports: [

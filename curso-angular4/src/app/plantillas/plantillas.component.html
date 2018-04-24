@@ -1,3 +1,15 @@
+
+<h4>Propiedades Input en Angular</h4>
+<p>Datos provenientes del componente plantillas y se pasa al componenete hijo</p>
+<componente-hijo
+[texto1]="dato_externo"
+[texto2]="identity"
+>
+
+</componente-hijo>
+
+<hr>
+
 <h4>
     {{titulo}}
 </h4>
@@ -14,3 +26,4 @@
         <button (click)="cambiar(true)">Cambiar</button>
         <strong style="background: red; color: white">NO eres el admin</strong>
 </ng-template>
+
