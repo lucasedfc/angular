@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+declare var $;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  public toggleTitle() {
+    $('.titulo').slideToggle();
+  }
 }
